@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Blog</title>
+
+        <!-- Linking bootstrap library -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Linking the needed css file -->
+        <link rel="stylesheet" href="./css/contact_styling.css">
+
+        <!-- Adding the needed scripts to make some basic functions work -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- Adding additional fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Add a navigation section -->
+        <div class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">HACK IN STYLE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html"> Home </a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.html"> Blog </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Contact Us </a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Add a contact me form -->
+        <div class="contact-me-container container">
+            <div class="speech-bubble">
+                <h2 class="contact-me-header">YOUR VOICE MATTERS</h2>
+                <p class="contact-me-paragraph">TO DO LATER</p>
+            </div>
+            
+            <!--add those to the class below mb-md-0 mb-5-->
+            <div class="contact-div col-md-12">
+                <!-- Title -->
+                <h2 class="contact-me-header">CONTACT FORM</h2>
+
+                <form id="contact-form" name="contact-form" action="../php/mail.php" method="POST">
+                    
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="column col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="name" class="form-control">
+                                <label class="label-container" for="name" class="">Your Name</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="column col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="email" name="email" class="form-control">
+                                <label class="label-container" for="email" class="">Your Email</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="column col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="subject" name="subject" class="form-control">
+                                <label class="label-container" for="subject" class="">Subject</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="column col-md-12">
+    
+                            <div class="md-form">
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                <label class="label-container" for="message">Your Message</label>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row">
+                        
+                        <!-- Grid column-->
+                        <div class="column col-sm-12">
+                            <!-- Send/Submit button  -->
+                            <a class="btn btn-primary btn-lg btn-block" onclick="document.getElementById('contact-form').submit();"> SEND </a>
+                            <div class="status"></div>
+                        </div>
+
+                    </div>
+
+                </form>
+        </div>
+    </body>
+</html>
